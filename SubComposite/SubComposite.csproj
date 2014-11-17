@@ -75,9 +75,6 @@
     <StartupObject>SubComposite.ProgramMpir</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Emil.GMP">
-      <HintPath>D:\Prime\GnuMpDotNet\Emil.GMP.dll</HintPath>
-    </Reference>
     <Reference Include="FsMpir.NET">
       <HintPath>..\packages\Mpir.NET.0.2.3\lib\net40\FsMpir.NET.dll</HintPath>
     </Reference>
@@ -96,8 +93,6 @@
   <ItemGroup>
     <Compile Include="Luhn.cs" />
     <Compile Include="ProgramMpir.cs" />
-    <Compile Include="ProgramLong.cs" />
-    <Compile Include="ProgramGmp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
