@@ -17,9 +17,9 @@ namespace SubComposite
             var intermediateDigitOptions = Enumerable.Range(0, 10).Select(x => (mpz_t)x).ToArray();
             var evenIntermediateDigitOptions = intermediateDigitOptions.Where(x => x % 2 == 0).ToArray();
             var oddIntermediateDigitOptions = intermediateDigitOptions.Where(x => x % 2 == 1).ToArray();
-            var finalDigitOptions = new mpz_t[] { 4, 6, 8 };
+            var finalDigitOptions = new mpz_t[] { 2 };
             int maxSize = 16;
-            for (int size = 6; size <= maxSize; size++)
+            for (int size = 16; size <= maxSize; size++)
             {
                 var sw = Stopwatch.StartNew();
                 int finalCount = 0;
@@ -43,7 +43,7 @@ namespace SubComposite
                                     var newValStr = newVal.ToString();
                                     if (size == i)
                                     {
-                                        // rightmost digits must be composite, but this is already covered by the ending digit being even
+                                        // rightmost digits must be composite except for rightmost digit, but this is already covered by the ending digit being 2
                                         // also, three instances of leading zeroes
                                         int zeroCount, sum;
                                         GetZeroesAndSum(newValStr, out zeroCount, out sum);
